@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <%- include('./layout/header)%>
+    </header>
+    <main>
+<%z.forEach(x=>{%>
+
+<p><%= b.quote%></p>
+
+<p><%= b.character%></p>
+
+<img src="<%= b.image%>">
+
+<%})%>
+<!-- ------------------------for update------------------------------------ -->
+<form action="/details/id<%b.i%>?_method=PUT" method="POST">
+<input value="%= b.quote%>" name="quote">
+<input value="%= b.image%>" name="image">
+<input value="%= b.character%>" name="character">
+<button>update data</button>
+</form>
+
+<!-- -------------------for delete------------------------- -->
+
+<form action="/details/id<%b.i%>?_method=DELETE" method="POST">
+
+    <input value="%= b.id%>" name="id">
+<button>delete</button>
+</form>
+    </main>
+</body>
+</html>

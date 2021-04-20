@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <%- include('./layout/header)%>
+    </header>
+    <main>
+
+<%z.forEach(x=>{%>
+    <div id="all">
+<form action="all" method="POST">
+<p><%= x.quote%></p>
+<input type="hidden" value="<%= x.quote%>" name="one">
+<p><%= x.character%></p>
+<input type="hidden" value="<%= x.character%>" name="two">
+<img src="<%= x.image%>">
+<input type="hidden" value="<%= x.image%>" name="three">
+<button>save</button>
+<%})%>
+</div>
+</form>
+    </main>
+</body>
+</html>
