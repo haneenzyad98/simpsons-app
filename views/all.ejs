@@ -8,12 +8,12 @@
 </head>
 <body>
     <header>
-        <%- include('./layout/header)%>
+        <%- include('layout/header.ejs')%>
     </header>
     <main>
 
 <%z.forEach(x=>{%>
-    <div id="all">
+    <div>
 <form action="all" method="POST">
 <p><%= x.quote%></p>
 <input type="hidden" value="<%= x.quote%>" name="one">
